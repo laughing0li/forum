@@ -3,6 +3,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -16,6 +17,8 @@ public class Post {
     private int id;
 
     private String content;
+
+    private Date publishDate;
 
     @ManyToOne
     @JoinColumn(name = "wid")

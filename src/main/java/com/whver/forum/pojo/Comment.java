@@ -3,6 +3,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -18,6 +19,8 @@ public class Comment {
     private String content;
 
     private String section; // this comment is come from posts or jobs or markets section
+
+    private Date createTime;
 
     @ManyToOne
     @JoinColumn(name = "wid")

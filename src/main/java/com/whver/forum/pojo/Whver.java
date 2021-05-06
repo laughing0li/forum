@@ -3,6 +3,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -18,6 +19,8 @@ public class Whver {
     private String name;
 
     private String password;
+
+    private Date createTime;
 
     @Transient
     private List<Image> images;
